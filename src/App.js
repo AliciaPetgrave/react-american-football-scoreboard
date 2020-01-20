@@ -11,6 +11,23 @@ function App() {
   //away
   const [tigers, setTigers] = useState(0);
 
+  //home touchdown
+  const lionsTouchdown = () => {
+    setLions(lions + 7);
+  }
+  //home field goal
+  const lionsFG = () => {
+    setLions(lions + 3)
+  }
+
+  //away touchdown
+  const tigersTouchdown = () => {
+    setTigers(tigers + 7);
+  }
+  //away field goal
+  const tigersFG = () => {
+    setTigers(tigers + 3);
+  }
 
   return (
     <div className="container">
@@ -21,12 +38,12 @@ function App() {
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
-            <div className="home__score">32</div>
+            <div className="home__score">{lions}</div>
           </div>
           <div className="timer">00:03</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
-            <div className="away__score">32</div>
+            <div className="away__score">{tigers}</div>
           </div>
         </div>
         <BottomRow />
